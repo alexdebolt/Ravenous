@@ -1,9 +1,10 @@
 import React from 'react';
 import './Business.css';
+import { createRequire } from 'module';
 
 
 const business = {
-  imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
+  imageSrc: './Jesse_Photo.png',
   name: "PJ's shitty ass apartment",
   address: '57 Go Fuck Yourself Street',
   city: "Cottage Cheese County",
@@ -22,7 +23,7 @@ class Business extends React.Component {
            
           <div className="Business">
             <div className="image-container">
-              <img src='https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg' alt=''/>
+              <img src={require('./Jesse_Photo.png')} alt=''/>
             </div>
             <h2>{business.name}</h2>
             <div className="Business-information">
