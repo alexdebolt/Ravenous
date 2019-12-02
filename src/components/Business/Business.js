@@ -1,19 +1,17 @@
 import React from 'react';
 import './Business.css';
-import { createRequire } from 'module';
-
 
 const business = {
   imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
-  name: "MarginOtto Pizzeria",
-  address: '57 Go Fuck Yourself Street',
-  city: "Cottage Cheese County",
-  state: 'Maine',
-  zipCode: '696969',
-  category: 'Rachelmade',
-  rating: "6 Peej",
-  reviewCount: '104 reviews of my ass'
-}
+  name: 'MarginOtto Pizzeria',
+  address: '1010 Paddington Way',
+  city: 'Bordertown',
+  state: 'NY',
+  zipCode: '10101',
+  category: 'Italian',
+  rating: 4.5,
+  reviewCount: 90
+};
 
 class Business extends React.Component {
     render() {
@@ -22,7 +20,7 @@ class Business extends React.Component {
            
           <div className="Business">
             <div className="image-container">
-              <img src={require('./Jesse_Photo.png')} alt=''/>
+              <img src={business.imageSrc} alt=''/>
             </div>
             <h2>{business.name}</h2>
             <div className="Business-information">
@@ -34,7 +32,7 @@ class Business extends React.Component {
               <div className="Business-reviews">
                 <h3>{business.category}</h3>
                 <h3 className="rating">{business.rating} Stars</h3>
-                <p>{business.reviewCount}</p>
+                <p>{business.reviewCount} reviews</p>
               </div>
             </div>
           </div>
